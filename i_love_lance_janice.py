@@ -1,3 +1,5 @@
+# map a->z, b-> y, etc in a string
+
 def answer(s):
     code = 'abcdefghijklmnopqrstuvwxyz'
     trans = {code[i]: code[-(i+1)] for i in range(len(code))}

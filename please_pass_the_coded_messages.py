@@ -1,3 +1,5 @@
+# given a list of digits, find the largest integer from those digits with the integer divisible by 3 (I think)
+
 def answer(l):
 
     def list2int(l2):

@@ -1,6 +1,9 @@
 import random
 
-# MISREAD QUESTION KMS
+# find triples (li,lj,lk) st i<j<k and li|lj and lj|lk
+
+
+# MISREAD QUESTION OOPS
 def answer(l):
     tot=0
     l_div = [0]
@@ -14,27 +17,8 @@ def answer(l):
 
     return tot
 
-def answer3(l):
-    col, row = [], []
-    for i in range(1, len(l)):
-        col.append(sum([1 if (l[i] % l[q] == 0) else 0 for q in range(i)]))
-        row.append(sum([1 if (l[q] % l[i] == 0) else 0 for q in range(i + 1, len(l))]))
 
-    return sum([a * b for a, b in zip(col, row)])
-
-def answer4(l):
-    count = 0
-    size = len(l)
-    if size < 3: return 0
-
-    cache = [0] * size
-    for x in xrange(size):
-        for y in xrange(x + 1, size):
-            if l[y] % l[x] == 0:
-                cache[y] += 1
-                count += cache[x]
-
-    return count
+# one of my many misinterpretations of the question
 
 def answer2(l):
     n = len(l)
@@ -48,28 +32,7 @@ def answer2(l):
     return len(unique)
 
 
-# def answer2(l):
-#     tot=0
-#     l2 = sorted(l)
-#     dup = dict()
-#     dup[l2[0]] = False
-#     for i in range(1, len(l)):
-#         if l2[i] in dup:
-#             dup[l2[i]] = True
-#         else:
-#             dup[l2[i]] = False
-#
-#     n = len(dup)
-#     for i in range(n):
-#         for j in range(i+1, n):
-#             for k in range(j+1, n):
-#                 d1 = (l2[j]+ 0.0)/l2[i]
-#                 d2 = (l2[k]+0.0)/l2[j]
-#                 if int(d1) == d1 and int(d2) == d2:
-#                     tot+=1
-#     return tot
-
-def answer(l):
+def answer3(l):
     tot = 0
     dup = dict()
 
@@ -109,9 +72,9 @@ def answer(l):
 
 for i in range(100000):
     l = [random.randint(5,15) for i in range(5)]
-    if answer0(l) != answer4(l):
+    if answer(l) != answer2(l):
         print(l)
-        print(answer0(l), answer4(l))
+        print(answer(l), answer2(l))
         break
 
 # print(answer([random.randint(1,10) for i in range(6)]))

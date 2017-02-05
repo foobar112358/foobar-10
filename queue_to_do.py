@@ -1,8 +1,22 @@
+'''
+Given length of matrix n, make an nxn matrix of consecutive integers starting at start.
+Find the xor of the upper left triangle and the diagonal.
+e.g. start = 4, length = 3:
+4 5 6
+7 8 9
+10 11 12
+
+Find 4^5^6^7^8^10
+
+'''
+
+
+# brute force to check solution
 def answer2(start, length):
     skip = length
     answer = 0
-    for row in xrange(length):
-        for val in xrange(length-row):
+    for row in range(length):
+        for val in range(length-row):
             answer ^= start
             start += 1
         start += (length-skip)
