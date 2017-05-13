@@ -1,5 +1,5 @@
 '''
-find min number of actions to convert an str integer (up to 300 digits in size) to 1
+find min number of actions to convert an str integer (up to 300 digits in size) to 1 
 # actions are n-> n+1, n-> n-1, n-> n/2
 '''
 
