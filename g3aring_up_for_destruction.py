@@ -1,7 +1,7 @@
 from fractions import Fraction
 
 '''
-given a list of peg locations, find radius of first gear s.t.
+given a list of peg locations, find radius of first gear s.t. 
 there as a gear on every peg, every gear touches, and the first gear is twice the radius of the last
 output: [a,b] representing radius of the first gear, representing a/b (in lowest terms)
  '''
