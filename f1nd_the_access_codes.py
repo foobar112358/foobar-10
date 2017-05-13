@@ -1,6 +1,6 @@
 import random
 
-# find triples (li,lj,lk) st i<j<k and li|lj and lj|lk
+# find triples (li,lj,lk) st i<j<k and li|lj and lj|lk 
 
 
 # MISREAD QUESTION OOPS
