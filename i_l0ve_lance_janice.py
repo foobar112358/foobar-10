@@ -1,4 +1,4 @@
-# map a->z, b-> y, etc in a string
+# map a->z, b-> y, etc in a string 
 
 def answer(s):
     code = 'abcdefghijklmnopqrstuvwxyz'
